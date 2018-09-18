@@ -1,0 +1,90 @@
+https://www.ibm.com/developerworks/rational/library/rational-adapter-hp-alm/
+
+
+
+https://jazz.net/wiki/bin/view/Main/RQMExcelWordImporter
+
+
+
+https://jazz.net/wiki/bin/view/Main/ExcelWordImporterBestPractice
+
+
+
+https://community.hpe.com/t5/Quality-Center-ALM-Practitioners/Test-Plan-export-from-QC-to-Excel/td-p/4807563
+
+
+
+http://update.external.hp.com/qualitycenter/qc90/sync/qcsynchronizer/QCSyncUG.pdf
+
+
+https://www.ibm.com/developerworks/community/blogs/AshwiniK/entry/may_10_2013_3_04_am?lang=en
+
+
+doc for installation of clear quest client
+
+https://community.hpe.com/t5/Quality-Center-ALM-Practitioners/HP-ALM-Synchronizer-CONNECTION-FAILURE-Failed-to-connect-to/td-p/6099015
+
+
+https://www.ibm.com/developerworks/rational/library/rational-adapter-hp-alm/
+CLM HP ALM
+
+
+${resource/salesForce.password}
+
+$strFileName="E:\salesforce_ant_38.0\sample\codepkg\package.xml"
+If (Test-Path $strFileName){
+  # // File exists
+Write-Host "Found File"
+}Else{
+  # // File does not exist
+ throw [System.IO.FileNotFoundException] "$strFileName not found."
+}
+
+
+$fromaddress = "blessieaparanjitha@gmail.com" 
+$toaddress = "pragnya.23393@gmail.com"
+$Subject = "ACtion Required" 
+$body = get-content .\msg.htm
+$smtpserver = "smtp.gmail.com"
+$smtpusername="blessieaparanjitha@gmail.com"
+$smtpport="465" 
+
+$message = new-object System.Net.Mail.MailMessage 
+$message.From = $fromaddress 
+$message.To.Add($toaddress) 
+$message.IsBodyHtml = $True 
+$message.Subject = $Subject  
+$message.body = $body 
+$smtp = new-object Net.Mail.SmtpClient($smtpserver) 
+$smtp.Send($message)
+
+
+set datetimef=%date:~-4%/%date:~4,2%/%date:~7,2% %time:~0,2%:%time:~3,2%:%time:~6,2%
+Write-Host $datetimef
+
+Get-Date
+
+
+commandOut.print("hello");
+
+
+http://www.ibm.com/support/knowledgecenter/SS4GSP_6.2.0/com.ibm.udeploy.doc/topics/comp_postprocess_examples.html
+
+
+$date=Get-Date
+echo MyDate=$date
+
+
+
+Get-Date -format M.d.yyyy-HH.mm.ss
+
+
+Any JVM can have its proxy options explicitly configured by passing the appropriate -D system property options to the runtime. Ant can be configured through all its shell scripts via the ANT_OPTS environment variable, which is a list of options to supply to Ant's JVM:
+
+For bash:
+
+    export ANT_OPTS="-Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080"
+
+
+rtc plugin jenkins
+https://www.youtube.com/watch?v=N4JQqfl2hcY

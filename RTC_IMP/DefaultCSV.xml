@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping version="1">
+<!--
+	
+	Usage:
+	- Specify the mapping between source attributes/values to Jazz attributes/values
+	- Removal of an <attribute> element will disable the import of the corresponding attribute
+	- If no explicit mapping for a value exists the mapping for source id "*" will be used if it exists
+	- Using source id "*" with an empty target id can be used to ignore unknown values
+	
+	Limitations:
+	- Import of some attributes is still hard-coded
+	- Some attributes are not supported for import
+	
+-->
+	<attribute sourceId="Accepted By" targetId="com.ibm.team.workitem.attribute.resolver"/>
+	<attribute sourceId="Actual time" targetId="com.ibm.team.workitem.attribute.correctedestimate"/>
+	<attribute sourceId="Archived" targetId="archived"/>
+	<attribute sourceId="Tracker" targetId="Tracker"/>
+	<attribute sourceId="Assignee" targetId="com.ibm.team.workitem.attribute.owner"/>
+	<attribute sourceId="Author" targetId="com.ibm.team.workitem.attribute.creator"/>
+	<attribute sourceId="Category" targetId="com.ibm.team.workitem.attribute.category"/>
+	<attribute sourceId="Closed" targetId="com.ibm.team.workitem.attribute.resolutiondate"/>
+	<attribute sourceId="Comments" targetId="com.ibm.team.workitem.attribute.comments"/>
+	<attribute sourceId="Created" targetId="com.ibm.team.workitem.attribute.creationdate"/>
+	<attribute sourceId="Custom Attributes" targetId="com.ibm.team.workitem.attribute.customattributes"/>
+	<attribute sourceId="Description" targetId="com.ibm.team.workitem.attribute.description"/>
+	<attribute sourceId="Due date" targetId="com.ibm.team.workitem.attribute.duedate"/>
+	<attribute sourceId="Estimated time" targetId="com.ibm.team.workitem.attribute.duration"/>
+	<attribute sourceId="Iteration" targetId="com.ibm.team.workitem.attribute.version"/>
+	<attribute sourceId="Modified By" targetId="com.ibm.team.workitem.attribute.modifiedby"/>
+	<attribute sourceId="Priority" targetId="com.ibm.team.workitem.attribute.priority">
+		<value sourceId="-1" targetId="priority.literal.l1"/>
+		<value sourceId="*" targetId="priority.literal.l1"/>
+		<value sourceId="1" targetId="priority.literal.l2"/>
+		<value sourceId="2" targetId="priority.literal.l3"/>
+		<value sourceId="3" targetId="priority.literal.l4"/>
+		<value sourceId="4" targetId="priority.literal.l5"/>
+		<value sourceId="5" targetId="priority.literal.l6"/>
+	</attribute>
+	<attribute sourceId="Project" targetId="Project"/>
+	<attribute sourceId="R_Id" targetId="com.ibm.team.workitem.attribute.id"/>
+	<attribute sourceId="Resolution" targetId="com.ibm.team.workitem.attribute.resolution"/>
+	<attribute sourceId="Restricted Access" targetId="contextId"/>
+	<attribute sourceId="Sequence Value" targetId="com.ibm.team.workitem.attribute.sequencevalue"/>
+	<attribute sourceId="Severity" targetId="com.ibm.team.workitem.attribute.severity">
+		<value sourceId="Unclassified" targetId="severity.literal.l1"/>
+		<value sourceId="Minor" targetId="severity.literal.l2"/>
+		<value sourceId="*" targetId="severity.literal.l3"/>
+		<value sourceId="Normal" targetId="severity.literal.l3"/>
+		<value sourceId="Major" targetId="severity.literal.l4"/>
+		<value sourceId="Critical" targetId="severity.literal.l5"/>
+		<value sourceId="Blocker" targetId="severity.literal.l6"/>
+	</attribute>
+	<attribute sourceId="Spent time" targetId="com.ibm.team.workitem.attribute.timespent"/>
+	<attribute sourceId="Start date" targetId="startDate"/>
+	<attribute sourceId="State Transitions" targetId="internalStateTransitions"/>
+	<attribute sourceId="Status" targetId="com.ibm.team.workitem.attribute.state"/>
+	<attribute sourceId="Subscribed By" targetId="com.ibm.team.workitem.attribute.subscriptions"/>
+	<attribute sourceId="Subject" targetId="com.ibm.team.workitem.attribute.summary"/>
+	<attribute sourceId="Tags" targetId="com.ibm.team.workitem.attribute.tags"/>
+	<attribute sourceId="Target version" targetId="com.ibm.team.workitem.attribute.target"/>
+	<attribute sourceId="Updated" targetId="com.ibm.team.workitem.attribute.modified"/>
+	<attribute sourceId="% Done" targetId="done"/>
+	<attribute sourceId="Acceptance Test" targetId="com.ibm.team.apt.attribute.acceptance"/>
+	<attribute sourceId="Affected Teams" targetId="com.ibm.team.rtc.attribute.affectedTeams"/>
+	<attribute sourceId="Branch" targetId="Branch"/>
+	<attribute sourceId="Bug Source" targetId="Bug"/>
+	<attribute sourceId="Change Request" targetId="Change"/>
+	<attribute sourceId="Impact" targetId="com.ibm.team.rtc.attribute.impact">
+		<value sourceId="Minor" targetId="impact.literal.l1"/>
+		<value sourceId="*" targetId="impact.literal.l2"/>
+		<value sourceId="Moderate" targetId="impact.literal.l2"/>
+		<value sourceId="Significant" targetId="impact.literal.l3"/>
+		<value sourceId="Major" targetId="impact.literal.l4"/>
+	</attribute>
+	<attribute sourceId="Initial Estimated Time" targetId="initialestimatedtime"/>
+	<attribute sourceId="Maximal Estimate" targetId="com.ibm.team.apt.estimate.maximal"/>
+	<attribute sourceId="Minimal Estimate" targetId="com.ibm.team.apt.estimate.minimal"/>
+	<attribute sourceId="Optional" targetId="Optional">
+		<value sourceId="Yes" targetId="optional.literal.l1"/>
+		<value sourceId="*" targetId="optional.literal.l2"/>
+		<value sourceId="No" targetId="optional.literal.l2"/>
+	</attribute>
+	<attribute sourceId="Rank" targetId="com.ibm.team.apt.attribute.planitem.newRanking._pm7NmRYUEd6L1tNIGdz5qQ"/>
+	<attribute sourceId="Rank (relative to Priority)" targetId="com.ibm.team.apt.attribute.planitem.priority._pm7NmRYUEd6L1tNIGdz5qQ"/>
+	<attribute sourceId="Reported for Build" targetId="Reportedforbuild"/>
+	<attribute sourceId="Start date" targetId="Startdate"/>
+	<attribute sourceId="Story Points" targetId="com.ibm.team.apt.attribute.complexity">
+		<value sourceId="*" targetId="0"/>
+		<value sourceId="0 pts" targetId="0"/>
+		<value sourceId="1 pt" targetId="1"/>
+		<value sourceId="100 pts" targetId="100"/>
+		<value sourceId="13 pts" targetId="13"/>
+		<value sourceId="2 pts" targetId="2"/>
+		<value sourceId="20 pts" targetId="20"/>
+		<value sourceId="3 pts" targetId="3"/>
+		<value sourceId="40 pts" targetId="40"/>
+		<value sourceId="5 pts" targetId="5"/>
+		<value sourceId="8 pts" targetId="8"/>
+	</attribute>
+	
+	<attribute sourceId="Test Run" targetId="testrun"/>
+	<attribute sourceId="Tested by Test Plan" targetId="com.ibm.team.apt.linktype.testedByTestPlan.testedBy"/>
+	<attribute sourceId="Affected by Defect" targetId="com.ibm.team.workitem.linktype.cm.affectedByDefect.defect"/>
+	<attribute sourceId="Successor" targetId="com.ibm.team.workitem.linktype.schedulePredecessor.successor"/>
+	<attribute sourceId="Predecessor" targetId="com.ibm.team.workitem.linktype.schedulePredecessor.predecessor"/>
+	<attribute sourceId="Duplicate Of" targetId="com.ibm.team.workitem.linktype.duplicateworkitem.duplicateOf"/>
+	<attribute sourceId="Duplicated By" targetId="com.ibm.team.workitem.linktype.duplicateworkitem.duplicates"/>
+	<attribute sourceId="Depends On" targetId="com.ibm.team.workitem.linktype.blocksworkitem.dependsOn"/>
+	<attribute sourceId="Blocks" targetId="com.ibm.team.workitem.linktype.blocksworkitem.blocks"/>
+	<attribute sourceId="Packaging Result" targetId="com.ibm.team.enterprise.package.linktype.packageBuildResult.packageBuildResult"/>
+	<attribute sourceId="Default Report" targetId="com.ibm.team.reports.linktype.defaultReport.defaultReport"/>
+	<attribute sourceId="Default Report For" targetId="com.ibm.team.reports.linktype.defaultReport.defaultReportFor"/>
+	<attribute sourceId="SVN Revisions" targetId="com.ibm.team.scm.svn.linkType.workItem.null"/>
+	<attribute sourceId="Work Item" targetId="com.ibm.team.scm.svn.linkType.workItem.null"/>
+	<attribute sourceId="Promoted Build Maps" targetId="com.ibm.team.enterprise.promotion.linktype.promotedBuildMaps.promotedBuildMaps"/>
+	<attribute sourceId="Related" targetId="com.ibm.team.workitem.linktype.relatedworkitem.related"/>
+	<attribute sourceId="Packaging Definition" targetId="com.ibm.team.enterprise.package.linktype.packageDefinition.packageDefinition"/>
+	<attribute sourceId="External URI" targetId="com.ibm.team.interop.linktype.external.externalProxy"/>
+	<attribute sourceId="Promoted Change Sets" targetId="com.ibm.team.enterprise.promotion.linktype.promotedChangeSets.promotedChangeSets"/>
+	<attribute sourceId="Deployment Result" targetId="com.ibm.team.enterprise.deployment.linktype.deploymentBuildResult.packageBuildResult"/>
+	<attribute sourceId="Work Items" targetId="com.ibm.team.workitem.linktype.attachment.workItem"/>
+	<attribute sourceId="Attachments" targetId="com.ibm.team.workitem.linktype.attachment.attachment"/>
+	<attribute sourceId="Included in Deployments" targetId="com.ibm.team.build.linktype.includedDeployments.com.ibm.team.build.common.link.includedInDeployment"/>
+	<attribute sourceId="Work Items Included in Deployment" targetId="com.ibm.team.build.linktype.includedDeployments.com.ibm.team.build.common.link.WorkItemsInDeployment"/>
+	<attribute sourceId="Included in Promotions" targetId="com.ibm.team.enterprise.promotion.linktype.resultWorkItem.result"/>
+	<attribute sourceId="Promoted Work Items" targetId="com.ibm.team.enterprise.promotion.linktype.resultWorkItem.promoted"/>
+	<attribute sourceId="Deployment Definition" targetId="com.ibm.team.enterprise.deployment.linktype.deploymentDefinition.packageDefinition"/>
+	<attribute sourceId="Tracks Plan" targetId="com.ibm.team.apt.linktype.tracksPlan.tracksPlan"/>
+	<attribute sourceId="Tracks Requirement" targetId="com.ibm.team.workitem.linktype.rm.tracksRequirement.requirement"/>
+	<attribute sourceId="Related Test Execution Record" targetId="com.ibm.team.workitem.linktype.qm.relatedExecutionRecord.executionRecord"/>
+	<attribute sourceId="Promotion Definition" targetId="com.ibm.team.enterprise.promotion.linktype.promotionDefinition.promotionDefinition"/>
+	<attribute sourceId="Promotion Build Result" targetId="com.ibm.team.enterprise.promotion.linktype.promotionBuildResult.promotionBuildResult"/>
+	<attribute sourceId="Tracks" targetId="com.ibm.team.workitem.linktype.tracksworkitem.tracks"/>
+	<attribute sourceId="Change Sets That Fill Gaps" targetId="com.ibm.team.enterprise.promotion.linktype.gapChangeSets.gapChangeSets"/>
+	<attribute sourceId="Mentions" targetId="com.ibm.team.workitem.linktype.textualReference.textuallyReferenced"/>
+	<attribute sourceId="ClearCase Versions" targetId="com.ibm.team.connector.ccbridge.common.ver2wi.null"/>
+	<attribute sourceId="ClearCase Activities " targetId="com.ibm.team.connector.ccbridge.common.act2wi.null"/>
+	<attribute sourceId="Change Sets That Were Not Promoted" targetId="com.ibm.team.enterprise.promotion.linktype.failedChangeSets.failedChangeSets"/>
+	<attribute sourceId="Children" targetId="com.ibm.team.workitem.linktype.parentworkitem.children"/>
+	<attribute sourceId="Parent task" targetId="com.ibm.team.workitem.linktype.parentworkitem.parent"/>
+	<attribute sourceId="Affects Test Result" targetId="com.ibm.team.workitem.linktype.affectsExecutionResult.affects"/>
+	<attribute sourceId="Previously Promoted Change Sets" targetId="com.ibm.team.enterprise.promotion.linktype.notPromotedChangeSets.notPromotedChangeSets"/>
+	<attribute sourceId="Related Test Script" targetId="com.ibm.team.workitem.linktype.qm.relatedTestScript.testScript"/>
+	<attribute sourceId="Related Test Plan" targetId="com.ibm.team.workitem.linktype.qm.relatedTestPlan.testPlan"/>
+	<attribute sourceId="Change Sets" targetId="com.ibm.team.filesystem.workitems.change_set.com.ibm.team.scm.ChangeSet"/>
+	<attribute sourceId="Copied From" targetId="com.ibm.team.workitem.linktype.copiedworkitem.copiedFrom"/>
+	<attribute sourceId="Copies" targetId="com.ibm.team.workitem.linktype.copiedworkitem.copies"/>
+	<attribute sourceId="Contributes To" targetId="com.ibm.team.workitem.linktype.trackedworkitem.trackedBy"/>
+	<attribute sourceId="Related Change Request" targetId="com.ibm.team.workitem.linktype.relatedChangeManagement.relatedChangeManagement"/>
+	<attribute sourceId="Included in Packages" targetId="com.ibm.team.build.linktype.includedPackages.com.ibm.team.build.common.link.includedInPackages"/>
+	<attribute sourceId="Work Items Included in Packages" targetId="com.ibm.team.build.linktype.includedPackages.com.ibm.team.build.common.link.WorkItemsInPackages"/>
+	<attribute sourceId="Related Test Suite" targetId="com.ibm.team.workitem.linktype.qm.relatedTestSuite.testSuite"/>
+	<attribute sourceId="Resolved By" targetId="com.ibm.team.workitem.linktype.resolvesworkitem.resolvedBy"/>
+	<attribute sourceId="Resolves" targetId="com.ibm.team.workitem.linktype.resolvesworkitem.resolves"/>
+	<attribute sourceId="Affects Plan Item" targetId="com.ibm.team.workitem.linktype.cm.affectsPlanItem.planItem"/>
+	<attribute sourceId="Reported Against Builds" targetId="com.ibm.team.build.linktype.reportedWorkItems.com.ibm.team.build.common.link.reportedAgainstBuilds"/>
+	<attribute sourceId="Work items reported against this build" targetId="com.ibm.team.build.linktype.reportedWorkItems.com.ibm.team.build.common.link.reportedWorkItems"/>
+	<attribute sourceId="Elaborated by Architecture Element " targetId="com.ibm.team.workitem.linktype.am.elaboratedBy.architectureElement"/>
+	<attribute sourceId="Related Test Case" targetId="com.ibm.team.workitem.linktype.qm.relatedTestCase.testCase"/>
+	<attribute sourceId="Related issues" targetId="com.ibm.team.workitem.linktype.relatedartifact.relatedArtifact"/>
+	<attribute sourceId="Change Sets (Remote)" targetId="com.ibm.team.workitem.linktype.scm.tracksChanges.changeSet"/>
+	<attribute sourceId="Packaging Summary Work Item" targetId="com.ibm.team.enterprise.packaging.linktype.resultWorkItem.result"/>
+	<attribute sourceId="Default Chart" targetId="com.ibm.team.reports.linktype.defaultChart.defaultChart"/>
+	<attribute sourceId="Default Chart For" targetId="com.ibm.team.reports.linktype.defaultChart.defaultChartFor"/>
+	<attribute sourceId="Tested By Test Case" targetId="com.ibm.team.workitem.linktype.testedByTestCase.testedby"/>
+	<attribute sourceId="Affects Requirement" targetId="com.ibm.team.workitem.linktype.rm.relatedRequirement.requirement"/>
+	<attribute sourceId="Change Request" targetId="com.ibm.team.filesystem.oslc_cm.change_request.change_set.changerequest"/>
+	<attribute sourceId="Implements Requirement" targetId="com.ibm.team.workitem.linktype.implementsRequirement.implements"/>
+	<attribute sourceId="Blocks Test Execution" targetId="com.ibm.team.workitem.linktype.blocksTestExecutionRecord.blocks"/>
+	<attribute sourceId="Implements Requirement Collection" targetId="com.ibm.team.apt.linktype.implementsRequirementCollection.implements"/>
+	<attribute sourceId="External connection" targetId="com.ibm.team.interop.linktype.item.externalConnection"/>
+	<attribute sourceId="Included in Builds" targetId="com.ibm.team.build.linktype.includedWorkItems.com.ibm.team.build.common.link.includedInBuilds"/>
+	<attribute sourceId="Work items included in this build" targetId="com.ibm.team.build.linktype.includedWorkItems.com.ibm.team.build.common.link.includedWorkItems"/>
+	<attribute sourceId="Contributes To Plan" targetId="com.ibm.team.apt.linktype.contributesToPlan.contributesToPlan"/>
+	<attribute sourceId="*"/>
+</mapping>

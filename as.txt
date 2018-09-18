@@ -1,0 +1,1 @@
+knife bootstrap vagrant@127.0.0.1:2222 --bootstrap-proxy 10.28.24.76:8080 -i "E:\Chef_test\.vagrant\machines\server\virtualbox\private_key" -N "Live_Node" --sudo 

@@ -1,0 +1,44 @@
+R_Id,Tracker,Project,Parent task,Status,Priority,Subject,Author,Assignee,Updated,Category,Target version,Start date,Due date,Estimated time,Spent time,% Done,Created,Closed,Related issues,Iteration,Actual Time,Accepted By,Bug Source,Optional,Initial Estimated Time,Branch,Reported for Build,Test Run,Change Request,Description
+12735,Story,CN_Customer_Feedback,,Closed,3,Station notes stopped working after com failover,Will Martin,,9/19/2016 12:10,Base - Miscellaneous,Release 5_6,6/8/2016 0:00,,,0,100,7/15/2016 12:48,9/19/2016 12:10,,,0,Will Martin,Fat,No,,CN OCS,174276_Patch5,N/A,,"*Info/Resources:*
+* Com Logs: /CNOCS/Backups/Logs/Logs_080616.tar.gz
+
+
+*Setup:*
+* System failed over due to COMA core dump
+* Open the station notes 
+* Attempt to create a new station note
+
+*Expected:*
+* The system allows you to create a new station note
+
+*Actual:*
+* The system does not allow the user to create a new station note
+
+NOTES:
+* To fix this in FAT we did the following:
+** Log off and log back into the BSD (ineffective)
+** Disconnect and Reconnect the workstation using coma (ineffective)
+** sigusr1 was sent to tar. This fixed the error on all workstatons except the workstation that was disconnected"
+12736,Story,CN_Customer_Feedback,,Closed,3,Station notes did not work on workstaiton that was disconnected and reconnected,Will Martin,,9/19/2016 12:09,Base - Miscellaneous,Release 5_6,7/15/2016 0:00,,,0,100,7/15/2016 12:48,9/19/2016 12:09,,,0,Will Martin,Fat,No,,CN OCS,174276_Patch5,N/A,,"*Info/Resources:*
+* Com Logs: /CNOCS/Backups/Logs/Logs_080616.tar.gz
+
+*Setup:*
+* System failed over due to COMA core dump
+* Open the station notes
+* Attempt to create a new station note
+* The system does not allow new station note to be created
+* Disconnect and reconnect workstation using COMA
+* Send a sigusr1 to tar
+* Attempt to use station notes on workstation that was disconnected.
+
+*Expected:*
+* All workstations can create station notes
+
+*Actual:*
+* The workstation that was disconnected could not create station notes
+* The station notes complained about station notes already being opened on channel 6"
+12737,Story,CN_Customer_Feedback,Story #12735: Loading of XML authority data,Signed Off,4,"Javadoc, Test, and Refactor",Sean Breid,,8/18/2016 14:38,,,5/24/2016 0:00,,,0,100,5/24/2016 15:10,8/18/2016 14:38,,,,,,,,,,,,
+12739,Story,CN_Customer_Feedback,Story #12737: Add full system synchronization of authority data,Signed Off,4,Modify installation instructions,Sean Breid,Bharati Bhalerao,8/3/2016 11:12,,,5/24/2016 0:00,,,0,100,5/24/2016 15:06,8/3/2016 11:12,,,,,,,,,,,,
+12742,Story,CN_Customer_Feedback,Story #12739: Loading of XML authority data,Signed Off,4,Run checksums on all authorities,Sean Breid,,8/18/2016 14:38,,,5/24/2016 0:00,,,0,100,5/24/2016 15:08,8/18/2016 14:38,,,,,,,,,,,,
+12743,Task,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+12744,Task,,,,,,,,,,,,,,,,,,Task #12743,,,,,,,,,,,

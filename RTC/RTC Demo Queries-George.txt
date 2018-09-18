@@ -1,0 +1,10 @@
+can we change the template?
+do we need to contact admin for creating/changing life cycle management?
+default number of roles? and what are the roles
+while importing a word doc, do we need to specify the way it should be imported?
+requirements collection can be treated as one release?
+
+
+status of work items-view in one place
+problems addressed by RTC
+adv of RTC

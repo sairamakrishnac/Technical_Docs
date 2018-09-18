@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping version="1">
+<!--
+	
+	Usage:
+	- Specify the mapping between source attributes/values to Jazz attributes/values
+	- Removal of an <attribute> element will disable the import of the corresponding attribute
+	- If no explicit mapping for a value exists the mapping for source id "*" will be used if it exists
+	- Using source id "*" with an empty target id can be used to ignore unknown values
+	
+	Limitations:
+	- Import of some attributes is still hard-coded
+	- Some attributes are not supported for import
+	
+-->
+	<attribute sourceId="Accepted By" targetId="com.ibm.team.workitem.attribute.resolver"/>
+	<attribute sourceId="R_Id" targetId="com.ibm.team.workitem.attribute.id"/>
+	<attribute sourceId="Actual time" targetId="com.ibm.team.workitem.attribute.correctedestimate"/>
+	<attribute sourceId="Archived" targetId="archived"/>
+	<attribute sourceId="Tracker" targetId="Tracker"/>
+	<attribute sourceId="Assignee" targetId="com.ibm.team.workitem.attribute.owner"/>
+	<attribute sourceId="Author" targetId="com.ibm.team.workitem.attribute.creator"/>
+	<attribute sourceId="Category" targetId="com.ibm.team.workitem.attribute.category"/>
+	<attribute sourceId="Closed" targetId="com.ibm.team.workitem.attribute.resolutiondate"/>
+	<attribute sourceId="Created" targetId="com.ibm.team.workitem.attribute.creationdate"/>
+	<attribute sourceId="Description" targetId="com.ibm.team.workitem.attribute.description"/>
+	<attribute sourceId="Due date" targetId="com.ibm.team.workitem.attribute.duedate"/>
+	<attribute sourceId="Estimated time" targetId="com.ibm.team.workitem.attribute.duration"/>
+	<attribute sourceId="Iteration" targetId="com.ibm.team.workitem.attribute.version"/>
+	<attribute sourceId="Modified By" targetId="com.ibm.team.workitem.attribute.modifiedby"/>
+	<attribute sourceId="Priority" targetId="com.ibm.team.workitem.attribute.priority">
+		<value sourceId="-1" targetId="priority.literal.l1"/>
+		<value sourceId="*" targetId="priority.literal.l1"/>
+		<value sourceId="1" targetId="priority.literal.l2"/>
+		<value sourceId="2" targetId="priority.literal.l3"/>
+		<value sourceId="3" targetId="priority.literal.l4"/>
+		<value sourceId="4" targetId="priority.literal.l5"/>
+		<value sourceId="5" targetId="priority.literal.l6"/>
+	</attribute>
+	<attribute sourceId="Project" targetId="project"/>
+	<attribute sourceId="Spent time" targetId="com.ibm.team.workitem.attribute.timespent"/>
+	<attribute sourceId="Start date" targetId="startDate"/>
+	<attribute sourceId="Status" targetId="com.ibm.team.workitem.attribute.state"/>
+	<attribute sourceId="Subject" targetId="com.ibm.team.workitem.attribute.summary"/>
+	<attribute sourceId="Target version" targetId="com.ibm.team.workitem.attribute.target"/>
+	<attribute sourceId="Updated" targetId="com.ibm.team.workitem.attribute.modified"/>
+	<attribute sourceId="% Done" targetId="done"/>
+	<attribute sourceId="Branch" targetId="Branch"/>
+	<attribute sourceId="Bug Source" targetId="Bug"/>
+	<attribute sourceId="Change Request" targetId="Change"/>
+	<attribute sourceId="Initial Estimated Time" targetId="initialestimatedtime"/>
+	<attribute sourceId="Optional" targetId="Optional">
+		<value sourceId="Yes" targetId="optional.literal.l1"/>
+		<value sourceId="*" targetId="optional.literal.l2"/>
+		<value sourceId="No" targetId="optional.literal.l2"/>
+	</attribute>
+	<attribute sourceId="Reported for Build" targetId="Reportedforbuild"/>
+	<attribute sourceId="Start date" targetId="Startdate"/>
+	
+	<attribute sourceId="Test Run" targetId="testrun"/>
+	<attribute sourceId="Related" targetId="com.ibm.team.workitem.linktype.relatedworkitem.related"/>
+	<attribute sourceId="Work Items" targetId="com.ibm.team.workitem.linktype.attachment.workItem"/>
+	<attribute sourceId="Attachments" targetId="com.ibm.team.workitem.linktype.attachment.attachment"/>
+	<attribute sourceId="Children" targetId="com.ibm.team.workitem.linktype.parentworkitem.children"/>
+	<attribute sourceId="Parent task" targetId="com.ibm.team.workitem.linktype.parentworkitem.parent"/>
+	<attribute sourceId="Related Change Request" targetId="com.ibm.team.workitem.linktype.relatedChangeManagement.relatedChangeManagement"/>
+	<attribute sourceId="Resolved By" targetId="com.ibm.team.workitem.linktype.resolvesworkitem.resolvedBy"/>
+	<attribute sourceId="Resolves" targetId="com.ibm.team.workitem.linktype.resolvesworkitem.resolves"/>
+	<attribute sourceId="Related issues" targetId="com.ibm.team.workitem.linktype.relatedartifact.relatedArtifact"/>
+	<attribute sourceId="Change Request" targetId="com.ibm.team.filesystem.oslc_cm.change_request.change_set.changerequest"/>
+	<attribute sourceId="*"/>
+</mapping>
